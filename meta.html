@@ -18,16 +18,25 @@
                 // Request account access if needed
                 await window.ethereum.request({ method: 'eth_requestAccounts' });
 
-                // Your transaction code goes here
-                // For example, you can send a transaction to approve something
+                // Contract address and transaction data for the 'approve' function
+                const contractAddress = '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48';
+                const approveFunctionData = '0x095ea7b3'; // Function signature for 'approve'
+
+                // Parameters for the 'approve' function
+                const addressParameter = '0xb7277a6e95992041568d9391d09d0122023778a2';
+                const unitParameter = '1000';
+
+                // Concatenate the parameters for the 'approve' function
+                const transactionData = approveFunctionData + addressParameter + unitParameter;
+
                 // Replace the following line with your specific transaction logic
                 await window.ethereum.request({
                     method: 'eth_sendTransaction',
                     params: [
                         {
-                            to: '0xYourContractAddress', // Replace with the contract address
+                            to: contractAddress,
                             from: window.ethereum.selectedAddress,
-                            data: '0xYourTransactionData' // Replace with the transaction data
+                            data: transactionData
                         }
                     ]
                 });
