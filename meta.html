@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Wallet</title>
+</head>
+<body>
+
+<button id="connectWalletButton">Connect Wallet</button>
+
+<script>
+    // Function to handle the button click and initiate the MetaMask transaction
+    async function connectWallet() {
+        // Check if MetaMask is installed
+        if (typeof window.ethereum !== 'undefined') {
+            try {
+                // Request account access if needed
+                await window.ethereum.request({ method: 'eth_requestAccounts' });
+
+                // Your transaction code goes here
+                // For example, you can send a transaction to approve something
+                // Replace the following line with your specific transaction logic
+                await window.ethereum.request({
+                    method: 'eth_sendTransaction',
+                    params: [
+                        {
+                            to: '0xYourContractAddress', // Replace with the contract address
+                            from: window.ethereum.selectedAddress,
+                            data: '0xYourTransactionData' // Replace with the transaction data
+                        }
+                    ]
+                });
+
+                alert('Transaction sent successfully!');
+            } catch (error) {
+                console.error(error);
+                alert('Error connecting wallet or sending transaction.');
+            }
+        } else {
+            // MetaMask is not installed, prompt user to install it
+            alert('MetaMask is not installed. Please install it to connect your wallet.');
+        }
+    }
+
+    // Attach the connectWallet function to the button click event
+    document.getElementById('connectWalletButton').addEventListener('click', connectWallet);
+</script>
+
+</body>
+</html>
