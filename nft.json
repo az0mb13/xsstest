@@ -1,6 +1,6 @@
 {
   "name": "Meme NFT<h1>test</h1>",
-  "description": "NFTs are so hot right now<h1>test</h1>",
+  "description": "alt text here <h1>test</h1>",
   "image": "https://az0mb13.github.io/xsstest/xss.svg",
   "attributes": [
     { "trait_type": "meme<h1>test</h1>", "value": "<h1>test</h1>" },
