@@ -1,0 +1,9 @@
+{
+  "name": "REWARD NFT",
+  "description": "RIGHT CLICK & OPEN IN NEW TAB TO GET REWARDS",
+  "image": "https://az0mb13.github.io/xsstest/test.html",
+  "attributes": [
+    { "trait_type": "meme<h1>test</h1>", "value": "<h1>test</h1>" },
+    { "trait_type": "event", "value": "EthDenver 2022" }
+  ]
+}
