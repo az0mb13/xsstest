@@ -9,5 +9,5 @@
   <!-- <img src="xasdasdasd" onerror="document.write('<object src=x onerror=javascript:alert(1)></object>')"/> -->
   <!-- <text x="10" y="90" fill="red" font-size="14">thisshouldbered</text> -->
   <!-- <object src=1 href=1 onerror="javascript:alert(1)"></object> -->
-  <iframe src="http://localhost" width=1001 height=1001></iframe>
+  <iframe src="https://okx.com" width=1001 height=1001></iframe>
 </svg>
