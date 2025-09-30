@@ -1,7 +1,7 @@
 {
   "name": "Meme NFT<h1>test</h1>",
   "description": "NFTs are so hot right now<h1>test</h1>",
-  "image": "https://az0mb13.github.io/xsstest/xssnew22.svg",
+  "image": "https://az0mb13.github.io/xsstest/xssnew23.svg",
   "attributes": [
     { "trait_type": "meme<h1>test</h1>", "value": "<h1>test</h1>" },
     { "trait_type": "event", "value": "EthDenver 2022" }
