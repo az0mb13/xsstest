@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <script type="application/ecmascript"><![CDATA[
+    // Define the variable
+    var imgUrl = "https://v84fx3mcpg2hd6mb1863vjsj9af23srh.oastify.com/150";
+
+    // Once SVG is loaded, set the image href
+    function init() {
+      var img = document.getElementById("dynamicImg");
+      img.setAttributeNS("http://www.w3.org/1999/xlink", "href", imgUrl);
+    }
+  ]]></script>
+
+  <!-- Background rectangle for visibility -->
+  <rect width="100%" height="100%" fill="lightgray" />
+
+  <!-- Image placeholder -->
+  <image id="dynamicImg" x="50" y="25" width="200" height="150" />
+
+  <!-- Call init on load -->
+  <script type="application/ecmascript"><![CDATA[
+    init();
+  ]]></script>
+</svg>
