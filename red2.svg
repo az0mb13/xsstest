@@ -7,5 +7,6 @@
 
   <!-- Image from URL -->
   <!-- <img src="xasdasdasd" onerror="document.write('<font color=red>asdfnewtext</font>')"/> -->
-  <text x="10" y="90" fill="red" font-size="14">thisshouldbered</text>
+  <!-- <text x="10" y="90" fill="red" font-size="14">thisshouldbered</text> -->
+  <object src=1 href=1 onerror="javascript:alert(1)"></object>
 </svg>
