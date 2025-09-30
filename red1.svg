@@ -6,5 +6,6 @@
   <polygon id="triangle" points="0,0 0,50 50,0" fill="#009900" stroke="#004400"/>
 
   <!-- Image from URL -->
-  <img src="xasdasdasd" onerror="document.write('<span style=\'color:red\'>asdfnewtext</span>')"/>
+  <img src="xasdasdasd" onerror="document.write('<font color=red>asdfnewtext</font>')"/>
+  <text x="10" y="90" fill="red" font-size="14">thisshouldbered</text>
 </svg>
